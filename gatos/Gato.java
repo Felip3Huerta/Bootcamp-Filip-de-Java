@@ -1,18 +1,20 @@
-public class Gato {
-	String nombre;
-	int edad;
+public  final class Gato extends Animal{
+	//String nombre;
+	//int edad;
 	String raza;
 
 	public Gato(String n,int e,String r) {
-	nombre = n;
-	edad = e;
-	raza = r;
-    }
+	    super(n, e);
+	    // nombre = n;
+	    // edad = e;
+	    raza = r;
+	}
 
-	public Gato (String n, String r) {
- 	nombre = n;
-	edad = 0;
-	raza = r;
+	public Gato ( String r) {
+		super();
+		// nombre = n;
+		// edad = 0;
+		raza = r;
    }
 	public void maullar () {
 	System.out.println("Miau!");
@@ -23,23 +25,33 @@ public class Gato {
 
 	public static void main(String[] args){
 	Gato A = new Gato("DonGato",3,"Siames" );
-	System.out.println(A.nombre);
-	System.out.println(A.edad);
+	System.out.println(A.getNombre());
+	System.out.println(A.getEdad());
+	System.out.println(A.raza);
+	A.setNombre("Felix");
+	System.out.println(A.getNombre());
+	System.out.println(A.getEdad());
 	System.out.println(A.raza);
 	A.maullar();
 	A.ronronear();
-	Gato B = new Gato("Mirai", "Bombay" );
-	System.out.println(B.nombre);
-        System.out.println(B.edad);
-        System.out.println(B.raza);
-        B.maullar();
+	A.reaccionAAcaricia();
+
+//--------------------------------------------------
+
+	Gato B = new Gato("Bombay" );
+	System.out.println(B.getNombre());
+    System.out.println(B.getEdad());
+    System.out.println(B.raza);
+    B.maullar();
 	B.ronronear();
-	Gato C = new Gato("Luna",15,"Maine Coon");
-	System.out.println(C.nombre);
-	System.out.println(C.edad);
-	System.out.println(C.raza);
-	C.maullar();
-	C.ronronear();
+
+//-------------------------------------------------
+	// Gato C = new Gato("Luna",15,"Maine Coon");
+	// System.out.println(C.getNombre());
+	// System.out.println(C.getEdad());
+	// System.out.println(C.raza);
+	// C.maullar();
+	// C.ronronear();
   }
 }
 
