@@ -23,6 +23,12 @@ public  final class Gato extends Animal{
 	System.out.println("Prrrrrrrr");
  }
 
+ 	@Override 
+	public void reaccionAAcaricia() {
+		System.out.println("oh me acariciaron!!");
+		ronronear();
+	}
+
 	public static void main(String[] args){
 	Gato A = new Gato("DonGato",3,"Siames" );
 	System.out.println(A.getNombre());
@@ -33,7 +39,8 @@ public  final class Gato extends Animal{
 	System.out.println(A.getEdad());
 	System.out.println(A.raza);
 	A.maullar();
-	A.ronronear();
+	//A.ronronear();
+	System.out.println("Vamos a acariciar al gato");
 	A.reaccionAAcaricia();
 
 //--------------------------------------------------
@@ -43,7 +50,9 @@ public  final class Gato extends Animal{
     System.out.println(B.getEdad());
     System.out.println(B.raza);
     B.maullar();
-	B.ronronear();
+	//B.ronronear();
+	System.out.println("Vamos a acariciar al gato");
+	B.reaccionAAcaricia();
 
 //-------------------------------------------------
 	// Gato C = new Gato("Luna",15,"Maine Coon");
